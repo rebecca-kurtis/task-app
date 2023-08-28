@@ -1,10 +1,11 @@
 -- DROP and CREATE projects TABLE
 DROP TABLE IF EXISTS projects CASCADE;
 
--- CREATE TABLE projects (
--- project_id SERIAL PRIMARY KEY NOT NULL,
--- title VARCHAR(255) NOT NULL,
--- description VARCHAR NOT NULL,
--- FOREIGN KEY(user_id) REFERENCES users,
--- created_at TIMESTAMP NOT NULL DEFAULT NOW()
--- );
+CREATE TABLE projects (
+project_id SERIAL PRIMARY KEY NOT NULL,
+title VARCHAR(255) NOT NULL,
+description VARCHAR NOT NULL,
+user_id INT,
+FOREIGN KEY(user_id) REFERENCES users ON DELETE CASCADE,
+created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
