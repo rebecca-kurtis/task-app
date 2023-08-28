@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const app = express();
 // const axios = require("axios").default;
 const dotenv = require("dotenv");
-const db = require("./db/connection");
+const db = require("../db/connection");
 
 
 
