@@ -1,43 +1,35 @@
 import { StatusBar } from "expo-status-bar";
 import { Helmet } from "react-helmet";
 import { StyleSheet, Text, View } from "react-native";
-import NewTaskForm from "./components/NewTaskForm";
+import * as eva from "@eva-design/eva";
+import { ApplicationProvider, Layout } from "@ui-kitten/components";
+
+import NewTaskForm from "./components/NewTask/NewTaskForm";
+
+const HomeScreen = () => (
+  <Layout style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+    <Text category="h1">HOME</Text>
+  </Layout>
+);
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Helmet>
-        <script
-          src="https://cdn.jsdelivr.net/npm/react/umd/react.production.min.js"
-          crossorigin="anonymous"
-          async
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/react-dom/umd/react-dom.production.min.js"
-          crossorigin="anonymous"
-          async
-        ></script>
-        <script
-          src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"
-          crossorigin="anonymous"
-          async
-        ></script>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-          crossorigin="anonymous"
-        />
-        <script>var Alert = ReactBootstrap.Alert;</script>
-      </Helmet>
-      <NewTaskForm />
-      <StatusBar style="auto" />
-    </View>
+    <ApplicationProvider {...eva} theme={eva.light}>
+      <Layout style={styles.homeContainer}>
+       
+          <Helmet>
+          </Helmet>
+          <NewTaskForm />
+          <StatusBar style="auto" />
+
+      </Layout>
+      {/* <HomeScreen /> */}
+    </ApplicationProvider>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  homeContainer: {
     flex: 1,
     backgroundColor: "#fff",
     justifyContent: "center",

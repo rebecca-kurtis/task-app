@@ -1,6 +1,7 @@
 import { RefreshControl } from "react-native-web";
 import {SafeAreaView, StyleSheet, TextInput,  Text, View } from 'react-native';
 import { useState } from "react";
+import DropdownSelect from "./DropdownSelect";
 
 export default function NewTaskForm() {
   const [titleText, onChangeSetTitleText] = useState('');
@@ -13,7 +14,7 @@ export default function NewTaskForm() {
         value={titleText}
         placeholder={"New Task Title"}
       />
-      
+      <DropdownSelect/>
     </View>
   );
 };
