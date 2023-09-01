@@ -9,13 +9,6 @@ export default function DropdownSelect() {
   const [selectedIndex, setSelectedIndex] = useState(new IndexPath(0));
   const [optionChosen, setOptionChosen] = useState('Set Priority Level');
 
-  const priorityLevels = {
-    label: 'Set Priority Level',
-    high: 'High',
-    medium: 'Medium',
-    low: 'Low'
-  }
-
   return (
     
     <Layout
@@ -25,15 +18,14 @@ export default function DropdownSelect() {
       <Select
         selectedIndex={selectedIndex}
         value={optionChosen}
+        label={ <Text>'Set Priority Level'</Text>}
         onSelect={(index, title) => {
           setSelectedIndex(index)
           console.log(index);
           console.log(title);
           console.log(index.row);
 
-          // if (index.row === 0) {
-          //   setOptionChosen('Set Priority Level');
-          // }
+  
           if (index.row === 0) {
             setOptionChosen('High');
           }
@@ -48,7 +40,7 @@ export default function DropdownSelect() {
           console.log(setOptionChosen);
         }}
         
-        // label={ <Text>'Set Priority Level'</Text>}
+       
       >
         {/* <SelectItem title='Set Priority Level' /> */}
         <SelectItem title='High' />

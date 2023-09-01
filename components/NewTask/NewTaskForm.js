@@ -5,6 +5,7 @@ import DropdownSelect from "./DropdownSelect";
 
 export default function NewTaskForm() {
   const [titleText, onChangeSetTitleText] = useState('');
+  const [descriptionText, onChangeSetDescriptionText] = useState('');
   return (
     <View style={styles.container}>
       <Text>Add a New Task:</Text>
@@ -15,6 +16,12 @@ export default function NewTaskForm() {
         placeholder={"New Task Title"}
       />
       <DropdownSelect/>
+      <TextInput
+        style={styles.input}
+        onChangeText={ onChangeSetDescriptionText }
+        value={descriptionText}
+        placeholder={"New Task Description"}
+      />
     </View>
   );
 };
