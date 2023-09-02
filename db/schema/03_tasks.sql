@@ -10,7 +10,8 @@ project_id INT,
 FOREIGN KEY(project_id) REFERENCES projects,
 user_id INT,
 FOREIGN KEY(user_id) REFERENCES users,
-created_at TIMESTAMP NOT NULL DEFAULT NOW()
+created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+completed BOOLEAN DEFAULT FALSE
 );  
 
 
