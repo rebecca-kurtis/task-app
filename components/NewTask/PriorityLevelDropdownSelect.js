@@ -4,10 +4,10 @@ import { useState } from "react";
 import { StyleSheet } from 'react-native';
 import { IndexPath, Layout, Select, SelectItem, Text } from '@ui-kitten/components';
 
-export default function DropdownSelect() {
+export default function DropdownSelect(state) {
 
+ 
   const [selectedIndex, setSelectedIndex] = useState(new IndexPath(0));
-  const [optionChosen, setOptionChosen] = useState('Set Priority Level');
 
   return (
     
@@ -17,7 +17,7 @@ export default function DropdownSelect() {
     >
       <Select
         selectedIndex={selectedIndex}
-        value={optionChosen}
+        value={state.state.priority_level}
         label={ <Text>'Set Priority Level'</Text>}
         onSelect={(index, title) => {
           setSelectedIndex(index)
@@ -27,17 +27,17 @@ export default function DropdownSelect() {
 
   
           if (index.row === 0) {
-            setOptionChosen('High');
+            state.setState("priority_level", "High");
           }
           if (index.row === 1) {
-            setOptionChosen('Medium');
+            state.setState("priority_level", "Medium");
           }
           if (index.row === 2) {
-            setOptionChosen('Low');
+            state.setState("priority_level", "Low");
           }
         
 
-          console.log(setOptionChosen);
+          // console.log(setOptionChosen);
         }}
         
        

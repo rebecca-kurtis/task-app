@@ -3,7 +3,7 @@ const cors = require("cors");
 const morgan = require('morgan');
 
 const app = express();
-// const axios = require("axios").default;
+const axios = require("axios").default;
 const dotenv = require("dotenv");
 const db = require("../db/connection");
 

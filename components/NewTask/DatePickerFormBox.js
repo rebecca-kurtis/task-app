@@ -3,8 +3,14 @@ import { StyleSheet } from 'react-native';
 import { Datepicker, Layout, Text } from '@ui-kitten/components';
 
 
-export default function DatePickerFormBox() {
+export default function DatePickerFormBox(state) {
   const [date, setDate] = useState(new Date());
+
+
+  function handleDateChange(nextDate) {
+    state.setState("due_date", date)
+    setDate(nextDate)
+  }
 
   return (
     <Layout
@@ -13,12 +19,12 @@ export default function DatePickerFormBox() {
     >
 
       <Text category='h6'>
-        {`Selected date: ${date.toLocaleDateString()}`}
+        {`Due Date: ${date.toLocaleDateString()}`}
       </Text>
 
       <Datepicker
         date={date}
-        onSelect={nextDate => setDate(nextDate)}
+        onSelect={nextDate => handleDateChange(nextDate)}
       />
 
     </Layout>
