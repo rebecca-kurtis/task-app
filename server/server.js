@@ -12,11 +12,16 @@ const config = {
 }
 
 const conn = connect(config)
-const results = await conn.execute('select 1 from dual where 1=?', [1])
-const users = await conn.execute('select * from users')
+// const results = await conn.execute('select 1 from dual where 1=?', [1])
 
-console.log(results);
-console.log(users.rows);
+// const newUser = await conn.execute('DELETE FROM users WHERE user_id = ?', [6])
+const users = await conn.execute('select * from users')
+// const users2 = await conn.execute('select email from users where user_id = ?', [1])
+
+// console.log(results);
+console.log(users);
+
+
 
 
 // const app = express();
