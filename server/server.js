@@ -1,6 +1,8 @@
-// const express = require("express");
+import express from "express";
+const app = express();
 // const cors = require("cors");
 // const morgan = require('morgan');
+
 
 import 'dotenv/config';
 import { connect } from '@planetscale/database'
@@ -15,11 +17,32 @@ const conn = connect(config)
 // const results = await conn.execute('select 1 from dual where 1=?', [1])
 
 // const newUser = await conn.execute('DELETE FROM users WHERE user_id = ?', [6])
-const users = await conn.execute('select * from users')
+// const users = await conn.execute('select * from users')
 // const users2 = await conn.execute('select email from users where user_id = ?', [1])
 
 // console.log(results);
-console.log(users);
+// console.log(users);
+
+
+
+app.post("/projects", (req, res) => {
+  // const relationship = req.body.relationship;
+  // const proseStyle = req.body.proseStyle;
+  // const occasion = req.body.occasion;
+  // const theme = req.body.themes;
+  // const mood = req.body.mood;
+
+  const query = "SELECT title FROM projects"
+
+  
+  conn.execute(query)
+  .then(function (response) {
+    console.log("test-response", response);
+    // res.status(200).json({ message });
+  }).catch(error => {
+    console.log(error);
+  });
+});
 
 
 
