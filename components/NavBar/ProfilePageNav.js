@@ -4,18 +4,16 @@ import { useState } from "react";
 import { StyleSheet } from 'react-native';
 import { IndexPath, Layout, Select, SelectItem, Text } from '@ui-kitten/components';
 
-export default function NavBar() {
+export default function ProfilePageNav() {
 
   return (
     
     <View>
-      <Text>Temporary Nav Bar Content</Text>
+      <Text>Icon</Text>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  selectContainer: {
-    minHeight: 128,
-  },
-});
+// const styles = StyleSheet.create({
+  
+// });
