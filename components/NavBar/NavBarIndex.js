@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from "react";
 
-import { StyleSheet } from 'react-native';
-import { IndexPath, Layout, Select, SelectItem, Text } from '@ui-kitten/components';
+import { StyleSheet, View } from "react-native";
+// import { IndexPath, Layout, Select, SelectItem, Text } from '@ui-kitten/components';
 
 //import components
 import HomePageNav from "./HomePageNav";
@@ -25,6 +25,6 @@ export default function NavBarIndex() {
 
 const styles = StyleSheet.create({
   selectContainer: {
-    minHeight: 128,
+    minHeight: 100,
   },
 });

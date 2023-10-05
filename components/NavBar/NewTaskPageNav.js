@@ -1,7 +1,8 @@
 import React from 'react';
 import { useState } from "react";
+import { MdAddTask } from 'react-icons/md';
 
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from "react-native";
 import { IndexPath, Layout, Select, SelectItem, Text } from '@ui-kitten/components';
 
 export default function NewTaskPageNav() {
@@ -9,7 +10,7 @@ export default function NewTaskPageNav() {
   return (
     
     <View>
-      <Text>Icon</Text>
+      <MdAddTask />
     </View>
   );
 };

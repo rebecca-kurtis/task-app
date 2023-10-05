@@ -4,7 +4,8 @@ import { StyleSheet, Text, View } from "react-native";
 import * as eva from "@eva-design/eva";
 import { ApplicationProvider, Layout } from "@ui-kitten/components";
 
-import NewTaskForm from "./components/NewTask/NewTaskForm";
+import NewTaskForm from "./components/NewTaskFormPage/NewTaskForm";
+import NavBarIndex from "./components/NavBar/NavBarIndex";
 
 const HomeScreen = () => (
   <Layout style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
@@ -24,6 +25,7 @@ export default function App() {
 
       </Layout>
       {/* <HomeScreen /> */}
+      <NavBarIndex />
     </ApplicationProvider>
   );
 }
