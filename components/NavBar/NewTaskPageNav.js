@@ -10,7 +10,7 @@ export default function NewTaskPageNav() {
   return (
     
     <View>
-      <MdAddTask />
+      {/* <MdAddTask /> */}
     </View>
   );
 };

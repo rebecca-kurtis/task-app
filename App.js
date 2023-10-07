@@ -33,12 +33,13 @@ export default function App() {
 const styles = StyleSheet.create({
   homeContainer: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: "#B8D0EB",
     justifyContent: "center",
     alignContent: "center",
     maxWidth: 500,
     textAlign: "center",
     // position: 'absolute',
     padding: 15,
+    color: "#fff"
   },
 });

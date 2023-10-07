@@ -10,7 +10,7 @@ export default function ProjectPageNav() {
   return (
     
     <View>
-      <AiFillFolderOpen />
+      {/* <AiFillFolderOpen /> */}
     </View>
   );
 };

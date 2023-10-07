@@ -1,0 +1,32 @@
+
+  .container {
+    flex: 1,
+    backgroundColor: "#fff",
+    justifyContent: "center",
+    alignContent: "center",
+    maxWidth: 500,
+    textAlign: "center",
+    // position: 'absolute',
+    padding: 15,
+  }
+
+  .titleH1: {
+    fontSize: 22,
+    fontWeight: 600,
+  }
+  .titleH3: {
+    fontSize: 15,
+    fontWeight: 600,
+  }
+  .input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  }
+  .description: {
+    height: 100,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  }

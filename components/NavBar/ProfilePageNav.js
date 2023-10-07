@@ -10,7 +10,7 @@ export default function ProfilePageNav() {
   return (
     
     <View>
-      <BiSolidUserCircle />
+      {/* <BiSolidUserCircle /> */}
     </View>
   );
 };

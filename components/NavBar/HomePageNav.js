@@ -10,7 +10,7 @@ export default function HomePageNav() {
   return (
     
     <View>
-      <AiFillHome />
+      {/* <AiFillHome /> */}
     </View>
   );
 };
