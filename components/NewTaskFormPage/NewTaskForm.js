@@ -53,6 +53,7 @@ export default function NewTaskForm() {
 
   return (
     <View style={styles.container}>
+      <View style={styles.newTaskFormTopSpacer}/>
       {/* <form onSubmit={handleUserSubmit} > */}
       <Layout style={styles.taskFormContainer}>
         <Text category="h2" style={styles.titleH1}>Add a New Task:</Text>
@@ -100,17 +101,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignContent: "center",
     maxWidth: 500,
-    maxHeight: 1000,
+    maxHeight: 1500,
     textAlign: "center",
     // position: 'absolute',
     padding: 15,
+  },
+  newTaskFormTopSpacer: {
+    height: 40,
   },
   taskFormContainer: {
     backgroundColor: "#6F2DBD",
     padding: 25,
     alignContent: "center",
     justifyContent: "center",
-
+    borderRadius: 25,
   },
   titleH1: {
     color: "#fff",

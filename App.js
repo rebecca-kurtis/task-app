@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignContent: "center",
     maxWidth: 500,
+    height: 1200,
     textAlign: "center",
     // position: 'absolute',
     padding: 15,

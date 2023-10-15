@@ -13,8 +13,7 @@ import ProfilePageNav from "./ProfilePageNav";
 export default function NavBarIndex() {
 
   return (
-    
-    <View>
+    <View style={styles.navIndexContainer}>
       <HomePageNav></HomePageNav>
       <ProjectPageNav></ProjectPageNav>
       <NewTaskPageNav></NewTaskPageNav>
@@ -24,7 +23,12 @@ export default function NavBarIndex() {
 };
 
 const styles = StyleSheet.create({
-  selectContainer: {
-    minHeight: 100,
+  navIndexContainer: {
+    height: 60,
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+    alignItems: "center",
+    backgroundColor: "#a663cc"
   },
 });
