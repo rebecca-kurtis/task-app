@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { StyleSheet, Text, View } from "react-native";
 import * as eva from "@eva-design/eva";
 import { ApplicationProvider, Layout } from "@ui-kitten/components";
+import { NavigationContainer } from '@react-navigation/native';
 
 import NewTaskForm from "./components/NewTaskFormPage/NewTaskForm";
 import NavBarIndex from "./components/NavBar/NavBarIndex";
@@ -15,18 +16,20 @@ const HomeScreen = () => (
 
 export default function App() {
   return (
-    <ApplicationProvider {...eva} theme={eva.light}>
-      <Layout style={styles.homeContainer}>
-       
-          <Helmet>
-          </Helmet>
-          <NewTaskForm />
-          <StatusBar style="auto" />
+    <NavigationContainer>
+      <ApplicationProvider {...eva} theme={eva.light}>
+        <Layout style={styles.homeContainer}>
+        
+            <Helmet>
+            </Helmet>
+            <NewTaskForm />
+            <StatusBar style="auto" />
 
-      </Layout>
-      {/* <HomeScreen /> */}
-      <NavBarIndex />
-    </ApplicationProvider>
+        </Layout>
+        {/* <HomeScreen /> */}
+        <NavBarIndex />
+      </ApplicationProvider>
+    </NavigationContainer>
   );
 }
 
